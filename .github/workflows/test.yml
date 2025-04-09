@@ -41,7 +41,7 @@ jobs:
       uses: super-linter/super-linter@v7.3.0
       env:
         DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GTB_TOKEN }}
         VALIDATE_ALL_CODEBASE: true
     # this is a test to see if the github action linux server can accept linex command
     - name: Testing server

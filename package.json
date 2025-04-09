@@ -8,7 +8,9 @@
     "test": "echo \"No tests yet\"",
     "lint": "prettier --write '**/*.{js,json,md,yml}'",
     "eslint": "eslint '**/*.js' --fix",
-    "check": "npm run lint && npm run eslint"
+    "check": "npm run lint && npm run eslint && npm run lint:md",
+    "run": "node index.js",
+    "lint:md": "markdownlint **/*.md"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   "homepage": "https://github.com/tim18fak-sys/action#readme",
   "devDependencies": {
     "eslint": "^8.57.1",
+    "markdownlint-cli": "^0.44.0",
     "prettier": "^3.2.5"
   }
 }

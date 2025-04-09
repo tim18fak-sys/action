@@ -1,4 +1,4 @@
-Leaning github action
+# Leaning github action
 
 <!-- to use an action -->
 <!-- use the uses keyword -->

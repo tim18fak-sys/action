@@ -17,9 +17,9 @@ jobs:
       - name: Super linter
         uses: super-linter/super-linter@v7.3.0
         env:
-          GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: yes
           VALIDATE_JAVASCRIPT_ES: yes
           DEFAULT_BRANCH: main
-          
+
 

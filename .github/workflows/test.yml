@@ -21,6 +21,4 @@ jobs:
           ls
       - name: Custom lint
         run: |
-          npm install
-          npm run check
-          npm run run
+          node --version

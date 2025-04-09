@@ -24,7 +24,7 @@ jobs:
         # now call reusable workflow
       - name: Calling bash script workflow
       # specify the path
-        uses: './.github/workflow/bash.yml'
+        uses: './.github/workflows/bash.yml'
 
 
 

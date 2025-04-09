@@ -49,6 +49,7 @@ jobs:
         touch index.txt
         echo "Hello world" >> index.txt
         cat index.txt
+        echo $secret.GTB_TOKEN
         ls
     
 

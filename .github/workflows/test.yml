@@ -33,8 +33,14 @@ jobs:
     runs-on: ubuntu-latest
     # add the steps 
     steps:
+    # first step is to checkout the code and expose it
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: 'Linting'
       # import an external action for linting
       uses: super-linter/super-linter@v7.3.0
+      env:
+        DEFAULT_BRANCH: main
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 

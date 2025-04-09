@@ -10,7 +10,8 @@
     "eslint": "eslint '**/*.js' --fix",
     "check": "npm run lint && npm run eslint && npm run lint:md",
     "run": "node index.js",
-    "lint:md": "markdownlint **/*.md"
+    "lint:md": "markdownlint **/*.md",
+    "script": "bash ./scripts/test.sh"
   },
   "repository": {
     "type": "git",

@@ -22,3 +22,6 @@ jobs:
       - name: Custom lint
         run: |
           node --version
+          npm run script
+          chmod +x scripts/test.sh
+          bash scripts/test.sh

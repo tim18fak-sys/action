@@ -1,0 +1,17 @@
+name: 'My first workflow'
+# events to listen for
+on: 
+  push: 
+    branches: 
+    # this is a list of strings
+      - main
+  pull_request: 
+    branches: 
+      - main
+
+# now this is the job that will be run when any of the defined events is triggered
+# this helps to group set of account that will run when an event is triggered
+# jobs:  
+# when adding the job pass in a name
+
+

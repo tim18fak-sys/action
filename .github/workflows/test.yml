@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     # add the steps 
     steps:
-      name: 'Linting'
+    - name: 'Linting'
       # import an external action for linting
       uses: super-linter/super-linter@v7.3.0
 

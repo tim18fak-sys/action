@@ -1,0 +1,58 @@
+
+
+
+
+# name: 'My first workflow'
+# # events to listen for
+# on:
+#   push:
+#     branches:
+#     # this is a list of strings
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# now this is the job that will be run when any of the defined events is triggered
+# this helps to group set of account that will run when an event is triggered
+# jobs:
+# note all jobs run in parallel, but to wait for a job to run because the other needs it use the needs keyword and add the name of the job it depends on
+# when adding the job pass in a name
+
+# Auto Lint on Push
+# Create a workflow that runs ESLint (or any linter) when you push to the main branch.
+name: 'Auth Lint on Push'
+# add the events to listen for
+on:
+  push:
+    # the branch
+    branches:
+      # this is a list
+      - main
+# now the jobs to run when the event is triggered
+jobs:
+  # first job
+  lint:
+    # add the server to run the jobs
+    runs-on: ubuntu-latest
+    # add the steps
+    steps:
+      # first step is to checkout the code and expose it
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: 'Linting'
+        # import an external action for linting
+        uses: super-linter/super-linter@v7.3.0
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: true
+      # this is a test to see if the github action linux server can accept linex command
+      - name: Testing server
+        run: |
+          touch index.txt
+          echo "Hello world" >> index.txt
+          cat index.txt
+          echo " ${{secrets.GITHUB_TOKEN}}"
+
+          ls

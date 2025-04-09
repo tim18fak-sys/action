@@ -1,9 +1,11 @@
 name: 'Bash Script'
 
 on:
-  push:
-    branches:
-      - main
+# now add the workflow_on event: this means that this will only be ran when called  from another workflow
+  # push:
+  #   branches:
+  #     - main
+  workflow_call:
 
 jobs:
   lint:

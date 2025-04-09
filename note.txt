@@ -57,3 +57,5 @@ jobs:
           echo " ${{secrets.GITHUB_TOKEN}}"
 
           ls
+
+NOTE: when i want to call a reusable workflow define it has another job and if needed wait for it to run before the other workflow runs

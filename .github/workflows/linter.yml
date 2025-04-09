@@ -12,8 +12,8 @@ jobs:
     uses: ./.github/workflows/bash.yml
   lint:
     runs-on: ubuntu-latest
-    needs:
-      - bash
+    # needs:
+    #   - bash
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -26,10 +26,10 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JAVASCRIPT_ES: true
           DEFAULT_BRANCH: main
-      #   # now call reusable workflow
-      # - name: Calling bash script workflow
-      # # specify the path
-      #   uses: './.github/workflows/bash.yml'
+      #   # now call reusable workflow job has one of the steps for the linter
+      - name: Calling the bash job has the one step of the linter
+        uses: bash
+      
 
 
 

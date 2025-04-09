@@ -23,5 +23,6 @@ jobs:
         run: |
           node --version
           npm run script
-          chmod +x scripts/test.sh
-          bash scripts/test.sh
+          ls
+          chmod +x test.sh
+          bash test.sh

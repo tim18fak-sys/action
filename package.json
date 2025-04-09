@@ -1,0 +1,34 @@
+{
+  "name": "github_action",
+  "version": "1.0.0",
+  "description": "Learning GitHub Actions with ESLint and Prettier",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "lint": "prettier --write '**/*.{js,json,md,yml}'",
+    "eslint": "eslint '**/*.js' --fix",
+    "check": "npm run lint && npm run eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim18fak-sys/action.git"
+  },
+  "keywords": [
+    "github-actions",
+    "eslint",
+    "prettier",
+    "ci",
+    "linter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tim18fak-sys/action/issues"
+  },
+  "homepage": "https://github.com/tim18fak-sys/action#readme",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "prettier": "^3.2.5"
+  }
+}

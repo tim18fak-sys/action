@@ -36,11 +36,19 @@ jobs:
     # first step is to checkout the code and expose it
     - name: Checkout code
       uses: actions/checkout@v3
-    - name: 'Linting'
-      # import an external action for linting
-      uses: super-linter/super-linter@v7.3.0
-      env:
-        DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - name: 'Linting'
+    #   # import an external action for linting
+    #   uses: super-linter/super-linter@v7.3.0
+    #   env:
+    #     DEFAULT_BRANCH: main
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # this is a test to see if the github action linux server can accept linex command
+    - name: Testing server
+      run: |
+        touch index.txt
+        echo "Hello world" >> index.txt
+        cat index.txt
+        ls
+    
 
 

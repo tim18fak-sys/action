@@ -27,8 +27,9 @@ jobs:
           VALIDATE_JAVASCRIPT_ES: true
           DEFAULT_BRANCH: main
       #   # now call reusable workflow job has one of the steps for the linter
-      - name: Calling the bash job has the one step of the linter
-        uses: bash
+      # so i can't call the reusable workflow job  has a step in another job
+      # - name: Calling the bash job has the one step of the linter
+      #   uses: bash
       
 
 

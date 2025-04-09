@@ -1,4 +1,4 @@
-name: 'Auth Lint on Push'
+name: 'Bash Script'
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
           cat index.txt
           echo "$GITHUB_TOKEN"
           ls
-      - name: Custom lint
+      - name: Custom bash script
         run: |
           node --version
           npm run script
